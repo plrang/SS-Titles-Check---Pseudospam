@@ -13,6 +13,7 @@
 var submitter_id;
 var _docLocation = window.location.href;
 
+
 // CHECK IF PROFILE PAGE
 var _match = /submit\.shutterstock\.com\/home\.mhtml/i.exec(_docLocation);
 
@@ -30,6 +31,8 @@ if (_match) {
                     '<a target="_blank" href="'
                             + URL_to_titles
                             + '" style="display:block;margin-top:8px;color:orange;background-color:#666;padding:4px"><b>TITLES CHECK ></b></a>');
+
+    // URL schemes
     // http://www.shutterstock.com/cat.mhtml?page=1&thumb_size=small&submitter_id=328114&search_type=gallery
     // http://www.shutterstock.com/cat.mhtml?gallery_id=328114
     // submitter=328114
@@ -121,17 +124,8 @@ if (_match) {
 
         /* http://stackoverflow.com/questions/524696/how-to-create-a-style-tag-with-javascript */
 
-        // document.write(css);
-
-        // alert( imgs_thumbs.length )
         for ( i = 0; i < imgs_thumbs.length; i++ ) {
-
-            // imgs_thumbs[i].style.visibility = "hidden";
             imgs_alt[i] = imgs_thumbs[i].getAttribute('alt');
-            // gcs[i].innerHTML = '...WORKS...';
-            // document.write( '<BR>' );
-            // document.write( i + ' >>> ' +imgs_alt[i] + '<BR>');
-
         }
 
         // http://www.shutterstock.com/pic-371668693/stock-photo-calhau-crater-cape-verde-sao-vicente-island-single-rock-martian-like-dry-red-ground-surface.html?src=tr0b4Z8SVbfgFBGS1J79Ow-1-0
@@ -155,10 +149,7 @@ if (_match) {
             edit_link = '<div class="plr_edit_btn">' + edit_link + '</div';
 
             imgs_thumbs[i].insertAdjacentHTML('beforebegin' , edit_link);
-
             title_checked = check_repeats(imgs_alt[i]);
-
-            // imgs_thumbs[i].innerHTML = title_checked;
             imgs_thumbs[i].insertAdjacentHTML('beforeend' , '<span>'
                     + title_checked + '</span>');
 
@@ -219,9 +210,6 @@ if (_match) {
         page_id_curr = total_pages;
     }
 
-    // _match + ' ' +
-    // alert( submitter_id + ' prev: ' + page_id_prev + ' next: ' + page_id_next
-    // + ' ??');
 
     new_URL_next = 'http://www.shutterstock.com/cat.mhtml?page=' + page_id_next
             + '&thumb_size=small&submitter_id=' + submitter_id
