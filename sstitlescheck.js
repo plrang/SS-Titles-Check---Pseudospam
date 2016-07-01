@@ -1,12 +1,13 @@
 //==UserScript==
-//@name        SS Titles Check - Pseudospam
-//@namespace   https://phototric.com/
-//@description SS Pseudospam (2016) - simple tool for Shutterstock contributors, allowing to check the repeating keywords in image titles
-//@include     http://www.shutterstock.com/*
-//@include     http://submit.shutterstock.com/*
-//@version     1
-//@author      Plrang 
-//@grant       none
+//@name         SS Titles Check - Pseudospam
+//@namespace    https://phototric.com/
+//@description  SS  Titles Check (WIP) - simple tool for Shutterstock contributors, allowing to check the repeating keywords in image titles
+//@include      http://www.shutterstock.com/*
+//@include      http://submit.shutterstock.com/*
+//@version      1.01
+//@copyright    2016 Art Plrang
+//@author       Plrang 
+//@grant        none
 //==/UserScript==
 
 
@@ -264,3 +265,7 @@ if (_match) {
     //  pseudospam_check();
 
 }
+
+/*
+ https://github.com/plrang/SS-Titles-Check---Pseudospam/blob/master/README.md
+*/
