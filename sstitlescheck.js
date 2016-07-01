@@ -1,19 +1,18 @@
-//==UserScript==
-//@name         SS Titles Check - Pseudospam
-//@namespace    https://phototric.com/
-//@description  SS  Titles Check (WIP) - simple tool for Shutterstock contributors, allowing to check the repeating keywords in image titles
-//@include      http://www.shutterstock.com/*
-//@include      http://submit.shutterstock.com/*
-//@version      1.01
-//@copyright    2016 Art Plrang
-//@author       Plrang 
-//@grant        none
-//==/UserScript==
-
+// ==UserScript==
+// @name         SS Titles Check - Pseudospam
+// @namespace    http://phototric.com/
+// @description  Simple tool for Shutterstock contributors, allowing to check the repeating keywords in image titles
+// @include      http://www.shutterstock.com/*
+// @include      http://submit.shutterstock.com/*
+// @downloadURL  https://gist.github.com/plrang/67589438920edaf086c470cd2e887b16/raw/c9f5599b8dadd2c6c0aec9077a46ab0db81bccb3/sstitlescheck.user.js
+// @version      1.01
+// @copyright    2016 Art Plrang
+// @author       Plrang 
+// @grant        none
+// ==/UserScript==
 
 var submitter_id;
 var _docLocation = window.location.href;
-
 
 // CHECK IF PROFILE PAGE
 var _match = /submit\.shutterstock\.com\/home\.mhtml/i.exec(_docLocation);
