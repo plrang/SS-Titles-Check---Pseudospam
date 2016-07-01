@@ -25,13 +25,10 @@ if (_match) {
     URL_to_titles = 'http://www.shutterstock.com/cat.mhtml?page=1&thumb_size=small&submitter_id='
             + submitter_id + '&search_type=gallery';
 
-    document
-            .getElementById('content_overview_container')
-            .insertAdjacentHTML(
-                    'afterend' ,
-                    '<a target="_blank" href="'
-                            + URL_to_titles
-                            + '" style="display:block;margin-top:8px;color:orange;background-color:#666;padding:4px"><b>TITLES CHECK ></b></a>');
+    document.getElementById('content_overview_container').insertAdjacentHTML(
+                    'afterend' , '<a target="_blank" href="' 
+                    + URL_to_titles
+                    + '" style="display:block;margin-top:8px;color:orange;background-color:#666;padding:4px"><b>TITLES CHECK ></b></a>');
 
     // URL schemes
     // http://www.shutterstock.com/cat.mhtml?page=1&thumb_size=small&submitter_id=328114&search_type=gallery
@@ -43,8 +40,7 @@ if (_match) {
 
 // CHECK IF PORTFOLIO PAGES
 // var _match = /shutterstock\.com\/gallery-(\d+)p(\d+)\./i.exec(_docLocation);
-var _match = /shutterstock\.com\/.*page=(\d+).*submitter_id=(\d+)/i
-        .exec(_docLocation);
+var _match = /shutterstock\.com\/.*page=(\d+).*submitter_id=(\d+)/i.exec(_docLocation);
 
 
 
@@ -166,9 +162,9 @@ if (_match) {
     // pseudospam_check();
 
     grid_pager_next_top.onclick = '';
-    // grid_pager_button_next.onclick = '';
+        // grid_pager_button_next.onclick = '';
     grid_pager_prev_top.onclick = '';
-    // grid_pager_button_prev.onclick = '';
+        // grid_pager_button_prev.onclick = '';
 
     total_pages = document.getElementById('grid_pager_top').textContent;
 
@@ -191,7 +187,7 @@ if (_match) {
     }
 
     if (_match != null) {
-        // submitter_id = _match[1];
+            // submitter_id = _match[1];
         page_id_next = _match[2];
         page_id_prev = page_id_next - 2;
 
@@ -255,9 +251,6 @@ if (_match) {
         window.location.href = new_URL_prev;
     };
 
-    //  grid_pager_button_next.onclick = function () { window.location.href = document.getElementById('grid_pager_next_top').href + '&search_type=gallery';  };
-
-    //  alert( document.getElementById('grid_pager_next_top').href );
 
     window.onload = function() {
         pseudospam_check();
