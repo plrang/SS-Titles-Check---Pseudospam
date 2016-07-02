@@ -13,6 +13,7 @@ Download and install SS Titles Check script. Easy way to do it is to
 go to https://gist.github.com/plrang/67589438920edaf086c470cd2e887b16 
 and click the RAW button.
 
+Use with the ENGLISH VERSION of the site.
 After the installation, in your Shutterstock contributor profile, under http://submit.shutterstock.com/home.mhtml, 
 you’ll find the new link. Right below [ your footage gallery > ] [ your image gallery > ] links.
 
