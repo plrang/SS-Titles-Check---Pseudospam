@@ -93,11 +93,11 @@ if (_match) {
         words_in_title = text.split(" ");
 
         for ( var i = 0; i < words_in_title.length; i++ ) {
-            if (words_rep.hasOwnProperty(words_in_title[i].toLowerCase()) == false) {
-                words_rep[words_in_title[i].toLowerCase()] = 0;
+            word = words_in_title[i].toLowerCase();
+            if ( words_rep.hasOwnProperty( word ) == false) {
+                words_rep[ word ] = 0;
             }
-            words_rep[words_in_title[i].toLowerCase()] = words_rep[words_in_title[i]
-                    .toLowerCase()] + 1;
+            words_rep[ word ] = words_rep[ word ] + 1;
 
         }
 
@@ -105,7 +105,7 @@ if (_match) {
 
         for ( var i = 0; i < words_in_title.length; i++ ) {
 
-            if (words_rep[words_in_title[i].toLowerCase()] > 1)
+            if (words_rep[ words_in_title[i].toLowerCase() ] > 1)
                 title_new += '<b style="color:red">' + words_in_title[i]
                         + '</b> ';
             else
@@ -116,6 +116,8 @@ if (_match) {
         return checked;
     }
 
+    
+    
     function pseudospam_check() {
 
         /* http://stackoverflow.com/questions/524696/how-to-create-a-style-tag-with-javascript */
@@ -166,14 +168,13 @@ if (_match) {
         // grid_pager_button_prev.onclick = '';
 
     total_pages = document.getElementById('grid_pager_top').textContent;
-
     re = new RegExp("of (\\d+)");
     _match = re.exec(total_pages);
-
+    
     if (_match != null) {
         total_pages = parseInt(_match[1]);
     } else {
-        alert('Problem while extracting: total_pages');
+        alert('Problem while extracting: total_pages\nSWITCHING to ENGLISH VERSION may help ');
         total_pages = 0;
     }
 
